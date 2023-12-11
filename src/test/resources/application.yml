@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+  error:
+    include-message: always
+
+spring:
+  codec:
+    max-in-memory-size: 3MB
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/vehicle-insurance-quotes
+      database: vehicle-insurance-quotes
+
+app:
+  inactivity-timeout-minutes: 10
+  initial-car-list-url: https://storage.googleapis.com/connex-th/insurance_assignment/car_model.json
+  business:
+    base-premium: 2000.00
+    premium-factors:
+      age:
+        24: 1.3
+        25: 1
+        40: 0.9
+        70: 0
+      driving-experience:
+        1: 1.5
+        2: 1.3
+        5: 1
+        10: 0.9
+      driver-record:
+        0: 1
+        1: 1.1
+        2: 1.3
+        4: 0
+      claims:
+        0: 0.9
+        1: 1.2
+        2: 1.5
+        4: 0
+      car-value:
+        29999.99: 0.8
+        30000.00: 1
+        60000.00: 1.2
+        100000.00: 1.5
+        150000.00: 2
+        200000.00: 0
+      annual-mileage:
+        19999: 0.9
+        20000: 1
+        30000: 1.1
+        50000: 1.3
+      insurance-history:
+        0: 1.2
+        1: 1.1
+        3: 1

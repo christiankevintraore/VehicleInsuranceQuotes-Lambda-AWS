@@ -1,0 +1,111 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.0'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id 'org.asciidoctor.jvm.convert' version '3.3.2'
+}
+
+group = 'ca.assignment'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+}
+
+configurations {
+	mapstruct
+
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	maven { url 'https://repo.spring.io/milestone' }
+	mavenCentral()
+}
+
+ext {
+	set('snippetsDir', file("build/generated-snippets"))
+	set('springCloudVersion', "2023.0.0-RC1")
+	
+	javaLanguageLevel = '1.7'
+	mapstructVersion = '1.6.0.Beta1'
+    generatedMapperSourcesDir = "${buildDir}/generated-src/mapstruct/main"
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'com.amazonaws.serverless:aws-serverless-java-container-springboot3:2.0.0-M2'
+	implementation 'org.owasp.encoder:encoder:1.2.3'
+	implementation 'org.apache.commons:commons-lang3'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor "org.projectlombok:lombok-mapstruct-binding:0.2.0"
+	implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+    mapstruct "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.restdocs:spring-restdocs-webtestclient'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'org.testcontainers:junit-jupiter'
+	testImplementation 'org.testcontainers:mongodb'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+sourceSets.main {
+    ext.originalJavaSrcDirs = java.srcDirs
+    java.srcDir "${generatedMapperSourcesDir}"
+}
+
+task generateMainMapperClasses(type: JavaCompile) {
+    ext.aptDumpDir = file("${buildDir}/tmp/apt/mapstruct")
+    destinationDir = aptDumpDir
+ 
+    classpath = compileJava.classpath + configurations.mapstruct
+    source = sourceSets.main.originalJavaSrcDirs
+    ext.sourceDestDir = file("$generatedMapperSourcesDir")
+ 
+    options.define(
+        compilerArgs: [
+            "-nowarn",
+            "-proc:only",
+            "-encoding", "UTF-8",
+            "-processor", "org.mapstruct.ap.MappingProcessor",
+            "-s", sourceDestDir.absolutePath,
+            "-source", rootProject.javaLanguageLevel,
+            "-target", rootProject.javaLanguageLevel,
+        ]
+    );
+ 
+    inputs.dir source
+    outputs.dir generatedMapperSourcesDir;
+    doFirst {
+         sourceDestDir.mkdirs()
+    }
+    doLast {
+        aptDumpDir.delete()
+    }
+}
+
+
+//compileJava.dependsOn generateMainMapperClasses
+
+tasks.named('test') {
+	outputs.dir snippetsDir
+	useJUnitPlatform()
+}
+
+tasks.named('asciidoctor') {
+	inputs.dir snippetsDir
+	dependsOn test
+}

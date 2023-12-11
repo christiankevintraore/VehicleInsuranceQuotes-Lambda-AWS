@@ -1,0 +1,202 @@
+{"properties": [
+  {
+    "name": "app.initial-car-list-url",
+    "type": "java.lang.String",
+    "description": "A description for 'app.initial-car-list-url'"
+  },
+  {
+    "name": "app.business.base-premium",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.base-premium'"
+  },
+  {
+    "name": "app.business.premium-factors.age.24",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.24'"
+  },
+  {
+    "name": "app.business.premium-factors.driving-experience.1",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driving-experience.1'"
+  },
+  {
+    "name": "app.business.premium-factors.age.39",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.39'"
+  },
+  {
+    "name": "app.business.premium-factors.age.69",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.69'"
+  },
+  {
+    "name": "app.business.premium-factors.age.70",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.70'"
+  },
+  {
+    "name": "app.business.premium-factors.driving-experience.2",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driving-experience.2'"
+  },
+  {
+    "name": "app.business.premium-factors.driving-experience.5",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driving-experience.5'"
+  },
+  {
+    "name": "app.business.premium-factors.driving-experience.10",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driving-experience.10'"
+  },
+  {
+    "name": "app.business.premium-factors.driver-record.0",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driver-record.0'"
+  },
+  {
+    "name": "app.business.premium-factors.driver-record.1",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driver-record.1'"
+  },
+  {
+    "name": "app.business.premium-factors.driver-record.2",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driver-record.2'"
+  },
+  {
+    "name": "app.business.premium-factors.driver-record.4",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.driver-record.4'"
+  },
+  {
+    "name": "app.business.premium-factors.claims.0",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.claims.0'"
+  },
+  {
+    "name": "app.business.premium-factors.claims.1",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.claims.1'"
+  },
+  {
+    "name": "app.business.premium-factors.claims.2",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.claims.2'"
+  },
+  {
+    "name": "app.business.premium-factors.claims.4",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.claims.4'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.29999.99",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.29999.99'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.59999.99",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.59999.99'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.99999.99",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.99999.99'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.149999.99",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.149999.99'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.199999.99",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.199999.99'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.200000.00",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.200000.00'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.19999",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.19999'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.29999",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.29999'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.49999",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.49999'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.50000",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.50000'"
+  },
+  {
+    "name": "app.business.premium-factors.insurance-history.0",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.insurance-history.0'"
+  },
+  {
+    "name": "app.business.premium-factors.insurance-history.1",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.insurance-history.1'"
+  },
+  {
+    "name": "app.business.premium-factors.insurance-history.3",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.insurance-history.3'"
+  },
+  {
+    "name": "app.business.premium-factors.age.25",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.25'"
+  },
+  {
+    "name": "app.business.premium-factors.age.40",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.age.40'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.30000.00",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.30000.00'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.60000.00",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.60000.00'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.100000.00",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.100000.00'"
+  },
+  {
+    "name": "app.business.premium-factors.car-value.150000.00",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.car-value.150000.00'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.20000",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.20000'"
+  },
+  {
+    "name": "app.business.premium-factors.annual-mileage.30000",
+    "type": "java.lang.String",
+    "description": "A description for 'app.business.premium-factors.annual-mileage.30000'"
+  },
+  {
+    "name": "app.inactivity-timeout-minutes",
+    "type": "java.lang.String",
+    "description": "A description for 'app.inactivity-timeout-minutes'"
+  }
+]}
