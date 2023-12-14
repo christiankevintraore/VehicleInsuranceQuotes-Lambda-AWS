@@ -2,7 +2,6 @@ package ca.assignment.vehicleInsuranceQuotes.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import ca.assignment.vehicleInsuranceQuotes.bean.dto.QuoteDTO;
 import ca.assignment.vehicleInsuranceQuotes.bean.dto.validator.DtoBeanValidator;
@@ -18,7 +17,6 @@ import reactor.core.publisher.Mono;
  * The default implementation of quote service.
  */
 @Service
-@Transactional
 public class QuoteServiceImpl implements QuoteService {
 	
 	@Autowired

@@ -17,7 +17,6 @@ import reactor.core.publisher.Mono;
 
 @Component
 @Slf4j
-@RequiredArgsConstructor(onConstructor=@__(@Autowired))
 public class ApplicationInit {
 	
 	@Value("${app.initial-car-list-url:https://storage.googleapis.com/connex-th/insurance_assignment/car_model.json}")

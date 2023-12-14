@@ -13,7 +13,7 @@ import ca.assignment.vehicleInsuranceQuotes.controller.handler.QuoteHandler;
 import ca.assignment.vehicleInsuranceQuotes.routing.common.AbstractRoutingHandler;
 
 /**
- * Car routing handler creator.
+ * Quote routing handler creator.
  */
 @Configuration
 public class QuoteRoutingHandler extends AbstractRoutingHandler {

@@ -36,7 +36,6 @@ import reactor.core.publisher.Mono;
  * The default implementation of quote request service.
  */
 @Service
-@Transactional
 @Slf4j
 public class QuoteRequestServiceImpl implements QuoteRequestService {
 	

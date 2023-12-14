@@ -36,3 +36,6 @@ out/
 
 ### VS Code ###
 .vscode/
+Thumbs.db
+Thumbs.db:encryptable
+.aws-sam/build.toml
